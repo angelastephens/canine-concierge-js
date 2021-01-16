@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <!-- header ==============================  -->
+<div class="bg-white-700 p-4 flex justify-between items-center">
+
+    <!--   left side -->
+    <div class="flex items-center">
+      <img src="https://cdn1.iconfinder.com/data/icons/fur-baby/256/Dog_Leash-512.png" width="50" alt="Logo" class="mr-2">
+      <a href="#" class="inline-block p-2 text-indigo-200 hover:text-indigo-100 mr-2">Home</a>
+      <a href="#" class="inline-block p-2 text-indigo-200 hover:text-indigo-100">About</a>
+    </div>
+  
+    <!--   right side -->
+    <div class="hidden md:block">
+      <a href="#" class="inline-block p-2 text-indigo-200 hover:text-indigo-100 mr-2">Login</a>
+      <a href="#" class="inline-block py-2 px-4 text-yellow-700 bg-yellow-400 hover:bg-yellow-300 hover:text-yellow-800 rounded transition ease-in duration-150">Sign Up</a>
+    </div>
+  
+  </div>
+  
+  <!-- hero ============================== -->
+  <div class="md:flex justify-between py-20 px-10 bg-blue-600 text-blue-100">
+  
+    <!--   left -->
+    <div class="md:w-1/2 mb-10 md:mb-0">
+      <h2 class="text-2xl md:text-4xl lg:text-6xl text-white mb-6">Welcome to <br>
+          Canine Concierge!</h2>
+      <p class="mb-6">All the fun for your furry best friend!</p>
+  
+      <a href="#footer" class="inline-block py-3 px-6 text-lg bg-gray-400 text-gray-800 hover:bg-gray-300 rounded mr-2">Schedule a Service</a>
+      <a href="#" class="inline-block py-3 px-6 text-lg bg-orange-400 text-orange-800 hover:bg-orange-300 rounded">Add New Dog</a>
+       
+    </div>
+  
+    <!--   right -->
+    <div class="md:w-1/2">
+      <img src="https://images.unsplash.com/photo-1536012441472-aae6b3ce330f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="Happiest Doggo" class="w-full rounded shadow-2xl">
+    </div>
+  
+  </div>
+  
+  <!-- features ============================== -->
+  <div class="md:flex py-16 px-10 bg-blue-800 text-blue-200 tex
+              t-center">
+    <div class="mr-2 text-center">
+      <img src="https://images.unsplash.com/photo-1586179253019-ac8a2522535f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1568&q=80" class="w-full mb-4 rounded border-solid border-2 border-indigo-400">
+      <p>Cuddles!</p>
+    </div>
+  
+    <div class="mr-2 mt-8 text-center">
+      <img src="https://images.unsplash.com/photo-1453369569379-52cd4fc989af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" class="w-full mb-4 rounded border-solid border-2 border-indigo-400">
+      <p>Smiles!</p>
+    </div>
+  
+    <div class="mr-2 text-center">
+      <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80" class="w-full mb-4 rounded border-solid border-2 border-indigo-400">
+      <p>Games!</p>
+    </div>
+  
+    <div class="mr-2 mt-8 text-center">
+      <img src="https://images.unsplash.com/photo-1505623776320-7edecf5f0771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="w-full mb-4 rounded border-solid border-2 border-indigo-400">
+      <p>Swims!</p>
+    </div>
+  </div>
+  
+  <!-- footer + newsletter ============================== -->
+ 
+  
+     
+  
+    </div>
+  
+    <!--   right -->
+    <div id= "footer" class="p-10 bg-blue-900 text-blue-400 flex justify-between">
+        <div class="container mx-auto sm:grid grid-cols-2 md:grid-cols-3 gap-4 my-4">
+            <section id="formContainer" class="px-4 bg-blue-100 sm:min-h-screen rounded-md shadow">
+                <h1 class="text-2xl semibold border-b-4 border-blue">Schedule a Service</h1>
+                <form id="newService">
+                    <label for="dog">Pick Your Dog</label> <br>
+                    <select name="dog_id" id="dog_choices"> <br>
+                        
+                    </select> <br>
+                    <br>
+                
+                    <label for="service">Select a Service:</label> <br>
+                    <select name="service" id="service"> <br>
+                        <option value="grooming">Grooming</option>
+                        <option value="exercise">Exercise</option>
+                        <option value="boarding">Boarding</option>
+                        <option value="cuddles">Cuddles</option> 
+                    </select> <br>
+                    <br>
+                
+                    <label for="dog">Date and Time Request</label>
+                    <input type="text" class="w-full" name="pick_up_time" id="pick_up_time"> <br>
+                    <br>
+                
+                    <label for="dog">Pick Up Location</label>
+                    <input type="text" class="w-full" name="pick_up_location" id="pick_up_location">
+                    
+                    <button type="submit" class="py-4 col-span-10 sm:col-span-4"> Lets Go! </button>
+                </form>
+            
+
+
+                <ul id="lists" class="list-none">
+                    <li class="my-2 px-4 bg-yellow-500 grid grid-cols-12 sm:grid-cols-6">
+                        <button type="submit" id="myDoggos" class="py-4 col-span-10 sm:col-span-4">My Dogs</button>
+                    </li>
+                    <li class="my-2 px-4 bg-yellow-500 grid grid-cols-12 sm:grid-cols-6">
+                        <a href="#" id="pupsAdventures" class="py-4 col-span-10 sm:col-span-4">Pups Adventures</a>
+                    
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="serviceContainer" class="px-4 bg-blue-100 md:col-start-3 sm:min-h-screen rounded-md shadow">
+                <h1 class="text-2xl semibold border-b-4 border-blue">Pups Adventures</h1>
+                    <h2>Pending Requests</h2>   
+            </section>
+        </div> 
+    </div> 
+
     
+
+
+<!--Modal-->
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        
+        <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+        
+        <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+            <span class="text-sm">(Esc)</span>
+        </div>
+    
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="modal-content py-4 text-left px-6">
+            <!--Title-->
+            <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Simple Modal!</p>
+            <div class="modal-close cursor-pointer z-50">
+                <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                </svg>
+            </div>
+            </div>
+    
+            <!--Body-->
+            <p>Modal content can go here</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+    
+            <!--Footer-->
+            <div class="flex justify-end pt-2">
+            <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Action</button>
+            <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+            </div>
+            
+        
+        </div>
+    </div>
+    
+
+       
+      
+ 
+
+  
+
+ <script type="text/javascript" src="js/utilities.js"></script>
+ <script type="text/javascript" src="js/models.js"></script>
+ <script type="text/javascript" src="js/listeners.js"></script>
 </body>
 </html>
+
