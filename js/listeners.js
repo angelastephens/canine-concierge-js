@@ -9,6 +9,7 @@ document.addEventListener("click", (e) => {
     else if(target.matches(".modal-close") || target.matches(".modal-overlay")) {
         e.preventDefault();
         Modal.toggle();
+        document.getElementById("newDog").reset()
       } 
 })
 
@@ -27,7 +28,7 @@ document.addEventListener("submit", (e) => {
     if(target.matches("#newService")) {
         e.preventDefault()
     ServiceRequest.post_service_requests()
-    }  if(target.matches("#letsGo")) {
+    }  if(target.matches("#newDog")) {     
         Dog.create()
     }
 })
@@ -43,5 +44,6 @@ document.addEventListener('keydown', function(evt) {
   }
   if (isEscape && document.body.classList.contains('modal-active')) {
     Modal.toggle()
+    document.getElementById("newDog").reset()
   }
 });
