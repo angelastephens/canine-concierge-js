@@ -6,8 +6,8 @@ class Dog{
     }
 
     static get_dogs(){
-        if (Dog.dogs){
-            return 
+        if (this.dogs){
+            return this.dogs
         }
        return fetch("http://localhost:3000/dogs")
        .then(response => {
@@ -42,6 +42,7 @@ class Dog{
         this.title.textContent = this.name
         this.title.id = this.id
         document.getElementById("myDoggos").appendChild(this.title)
+        
 
     }
 
@@ -54,16 +55,22 @@ class Dog{
 
     }
 
-    static create(formData) {
+    static create() {
         return fetch("http://localhost:3000/dogs", {
             method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({dog: formData})
+            body: JSON.stringify({"dog":{
+                "name": document.getElementById("name").value,
+                "age": document.getElementById("age").value,
+                "sex": document.getElementById("sex").value,
+                
+            }})
         })
             .then(res => {
+                
                 if(res.ok) {
                     return res.json()
                 }   else {
@@ -72,13 +79,14 @@ class Dog{
             })
             .then(dogAttributes => {
                 let dog = new Dog(dogAttributes);
-                this.get_dogs.push(dog);
-                this.collection().appendChild(dog.display());
-                new FlashMessage({type: 'WoofWoof!', message: "New pup added successfully"})
-                return dog;
+                this.get_dogs().push(dog);
+                dog.display()
+                dog.displayOptions()
+
+               
             }) 
             .catch(error => {
-                new FlashMessage({type: 'error', message: error});
+                console.error(error);
             })
     }
 
