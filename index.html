@@ -36,7 +36,7 @@
       <p class="mb-6">All the fun for your furry best friend!</p>
   
       <a href="#footer" class="inline-block py-3 px-6 text-lg bg-gray-400 text-gray-800 hover:bg-gray-300 rounded mr-2">Schedule a Service</a>
-      <a href="#" class="inline-block py-3 px-6 text-lg bg-orange-400 text-orange-800 hover:bg-orange-300 rounded">Add New Dog</a>
+      <a href="#" id="addDog" class="inline-block py-3 px-6 text-lg bg-orange-400 text-orange-800 hover:bg-orange-300 rounded">Add New Dog</a>
        
     </div>
   
@@ -149,7 +149,7 @@
         <div class="modal-content py-4 text-left px-6">
             <!--Title-->
             <div class="flex justify-between items-center pb-3">
-            <p class="text-2xl font-bold">Simple Modal!</p>
+            <p id="modal-title" class="text-2xl font-bold">Simple Modal!</p>
             <div class="modal-close cursor-pointer z-50">
                 <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                 <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
@@ -158,11 +158,20 @@
             </div>
     
             <!--Body-->
-            <p>Modal content can go here</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
+            <div id="modal-content"></div>
+            <form id="newDog">
+                <label for="dog">Enter Dogs Name</label> <br>
+                <input type="text" class="w-full" name="name" id="name"> <br>
+                <br>
+                <label for="dog">Enter Your Dogs Age</label> <br>
+                <input type="text" class="w-full" name="age" id="age"> <br>
+                <br>
+                <label for="dog">Enter The Sex of Your Dog</label> <br>
+                <input type="text" class="w-full" name="sex" id="sex"> <br>
+            
+                <button id="letsGo" type="submit" class="py-4 col-span-10 sm:col-span-4"> Add Pup! </button>
+            </form>
+            </div>
     
             <!--Footer-->
             <div class="flex justify-end pt-2">
