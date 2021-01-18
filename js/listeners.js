@@ -17,7 +17,7 @@ document.addEventListener("click", (e) => {
  
 
 document.addEventListener("DOMContentLoaded", (e) => {
-    console.log()
+    //console.log()
     Dog.get_dogs().then(() => ServiceRequest.get_service_requests())
     Modal.init();
     
